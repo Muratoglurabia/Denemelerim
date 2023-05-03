@@ -1,0 +1,40 @@
+package NameMeaning;
+
+import java.util.Scanner;
+
+public class NameMeaning {
+
+	public static void main(String[] args) {
+	
+		Scanner reader = new Scanner(System.in);
+		
+		System.out.println("Welcome to Name Meaning :) ");
+		System.out.println("What is your name ?");
+		String name = reader.next();
+		System.out.println("your meaning of name: ");
+		
+		String meaning = name; 
+		switch (name ) {
+		case "kubra" : name  = ("The name kubra is a girl name "
+				+ "meaning 'great.'") ;
+		break;
+	    case "elif" : name  = ("The name elif is a girl name "
+			+ "meaning 'slender', 'thin.'") ;
+	    break;
+
+	    case "rabia" : name  = ("The name rabia is a girls name "
+				+ "meaning 'fourth female.'") ;
+	    break;
+	    case "hasan" : name  = ("The name hasan is a boy name "
+				+ "meaning 'handsome.'") ;
+	    break;
+	    case "john" : name  = ("The name john is a boy name "
+				+ "meaning 'graced by god.'") ;
+	    break;
+	    default : System.out.println("We couldnt your name meaning :( ");
+	}
+		System.out.println(name);
+		reader.close();
+
+}
+}
