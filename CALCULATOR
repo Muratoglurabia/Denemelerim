@@ -1,0 +1,46 @@
+package Calculator;
+
+import java.util.Scanner;
+
+public class MyCalculator {
+
+	public static void main(String[] args) {
+		
+	Scanner reader = new Scanner(System.in);
+	
+	System.out.println("Welcome to calculator");
+		
+	System.out.println("Please enter the numbers which is calculate ");
+	
+	int number1 = reader.nextInt();
+	int number2 = reader.nextInt();
+	
+	System.out.println("Please enter the transiction "
+			+ "you want to calculate ");
+	
+	char transiction = reader.next().charAt(0);
+	
+	int result;
+	
+	switch (transiction){
+	
+	case '+' : result = number1 + number2;
+	System.out.println(result);
+	break;
+	case '-' : result = number1 - number2;
+	System.out.println(result);
+	break;
+	case '*' : result = number1 * number2;
+	System.out.println(result);
+	break;
+	case '/' : result = number1 / number2;
+	System.out.println(result);
+	break;
+	
+	default : System.out.println("Please enter valid transiction '+,-,/,*,'");
+	
+	}
+    reader.close();
+	}
+
+}
