@@ -1,0 +1,26 @@
+package NotOrtalamasi;
+
+import java.util.Scanner;
+
+public class NotOrtalamasi {
+
+	public static void main(String[] args) {
+	
+	Scanner reader = new Scanner (System.in);
+	int quiz , vize , ffinal ;
+	double ortalama;
+	System.out.println("Merhaba quiz notunuzu giriniz..");
+	 quiz = reader.nextInt();	
+	 System.out.println("Merhaba vize notunuzu giriniz..");
+	 vize = reader.nextInt();	
+	 System.out.println("Merhaba final notunuzu giriniz..");
+	 ffinal = reader.nextInt();	
+     
+     ortalama = (quiz * 0.2 + vize * 0.35 + ffinal * 0.45);
+   
+     String sonuc = (ortalama >= 50) ? "Gectiniz " : "Kaldiniz";
+     System.out.println("not ortalamaniz:" + ortalama);
+     System.out.println(sonuc);
+	}
+
+}
