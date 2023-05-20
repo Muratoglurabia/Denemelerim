@@ -1,0 +1,27 @@
+print("""
+           *************
+   Hesap makinesine hosgeldiniz..
+   
+    Toplama islemi icin 1`e basiniz..
+    Cikarma islemi icin 2`e basiniz..
+    Carpma  islemi icin 3`e basiniz..
+    Bolme   islemi icin 4`e basiniz..
+           *************
+""")
+
+a = int(input("Birinci sayiyi giriniz:"))
+b= int(input("Ikinci sayiyi giriniz: "))
+islem= int(input("islemi seciniz : "))
+
+if islem==1:
+        print("{} + {} = {}".format(a,b,a+b))
+
+elif islem==2:
+        print("{} - {} = {}".format(a,b,a-b))
+
+elif islem == 3:
+        print("{} * {} = {}".format(a, b, a * b))
+elif islem==4:
+        print("{} / {} = {}".format(a,b,a/b))
+else:
+    print("Gecersiz islem..")
