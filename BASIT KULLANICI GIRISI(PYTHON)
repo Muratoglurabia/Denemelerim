@@ -1,19 +1,28 @@
 print("""
-      ****************
-      KULLANICI GIRISI
-      ****************
+   ********************
+KULLANICI GIRISI PROGRAMI 2
+   ********************
+
 """)
-kullaniciAdi= "rabia"
-sifre ="1234"
 
-a=input("Kullanici adini giriniz: ")
-b=input("Sifrenizi giriniz: ")
-
-if (kullaniciAdi == a and sifre != b):
-    print("Hatali sifre girdiniz..")
-elif (kullaniciAdi != a and sifre== b):
-    print("Hatali kullanici adi girdiniz..")
-elif (kullaniciAdi != a and sifre != b):
-    print("Kullanici adi ve sifre hatali..")
-else:
-    print("Giris basarili..")
+sys_kullanici_adi= "rabia"
+sys_kullanici_parola="123"
+hak=3
+while True:
+    ad=input("Kullanici adini giriniz: ")
+    parola=input("Parolanizi giriniz: ")
+    if (ad==sys_kullanici_adi and parola!=sys_kullanici_parola):
+        print("Kullanici adi hatali..")
+        hak-=1
+    elif(ad!=sys_kullanici_adi and parola==sys_kullanici_parola):
+        print("Parola hatali..")
+        hak-=1
+    elif(ad!=sys_kullanici_adi and parola!=sys_kullanici_parola):
+        print("Kullanici adi ve sifre hatali..")
+        hak-=1
+    else:
+        print("Giris basarili...")
+        break
+    if (hak==0):
+        print("Giris hakkiniz bitti..")
+        break
