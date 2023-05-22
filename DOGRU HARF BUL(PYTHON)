@@ -1,0 +1,12 @@
+print("""
+   *************
+DOGRU HARF BULMACA
+   *************
+
+""")
+
+while True:
+    harf=input("Bir harf giriniz: ")
+    if(harf == "t" or harf == "m"):
+        print("Kaybettin..")
+        break
