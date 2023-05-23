@@ -34,15 +34,13 @@ while True:
 
           elif (islem == 2):
 
-              miktar = int(input("Cekmek istediginiz miktari giriniz:"))
-              bakiye -= miktar
-              if (miktar > bakiye):
-                 print("\nBakiye yetersiz..")
+            miktar=int(input("Cekmek istediginiz miktar:"))
+            if (bakiye - miktar < 0):
+               print("Bu kadar para çekemezsiniz...")
+               print("Bakiyeniz {} tldir".format(bakiye))
+               continue
 
-
-              elif(miktar<=bakiye):
-                print("\nYeni bakiyeniz: ", bakiye, "tl`dir..\n")
-
+            bakiye -= miktar
 
           elif (islem == 3):
             print("Bakiyeniz :", bakiye, "tl`dir..\n")
