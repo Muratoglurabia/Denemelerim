@@ -5,7 +5,7 @@ ATM`YE HOSGELDINIZ..
 """)
 sys_sifre= 1234
 hak=3
-
+bakiye = 1000
 while True:
   sifre = int(input("Lutfen sifrenizi giriniz:"))
   if(sys_sifre==sifre):
@@ -17,7 +17,7 @@ while True:
        4.Cikis yapmak""")
 
           islem = int(input("\nYapmak istediginiz islemi seciniz:"))
-          bakiye = 1000
+          
 
           if (islem == 1):
               miktar = int(input("Yatirmak istediginiz miktari giriniz:"))
@@ -38,7 +38,7 @@ while True:
               bakiye -= miktar2
               if (miktar2 > bakiye):
                  print("\nBakiye yetersiz..")
-                 continue
+                 
 
               elif(miktar2<=bakiye):
                 print("\nYeni bakiyeniz: ", bakiye, "tl`dir..\n")
