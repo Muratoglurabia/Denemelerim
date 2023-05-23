@@ -1,0 +1,67 @@
+print("""
+   ********************
+ATM`YE HOSGELDINIZ..
+   ********************
+""")
+sys_sifre= 1234
+hak=3
+
+while True:
+  sifre = int(input("Lutfen sifrenizi giriniz:"))
+  if(sys_sifre==sifre):
+      while True:
+          print("""       
+       1.Para yatirmak
+       2.Para cekmek
+       3.Bakiye goruntulemek
+       4.Cikis yapmak""")
+
+          islem = int(input("\nYapmak istediginiz islemi seciniz:"))
+          bakiye = 1000
+
+          if (islem == 1):
+              miktar = int(input("Yatirmak istediginiz miktari giriniz:"))
+              bakiye += miktar
+              print("\nYeni bakiyeniz: ", bakiye, "tl`dir..\n")
+              islem2=int(input("1.Ana menu\n2.Cikis\n"))
+              if(islem2==1):
+                print("Ana menuye gidiliyor..")
+                continue
+              else:
+                print("Cikis yapiliyor..")
+                break
+
+
+          elif (islem == 2):
+
+              miktar2 = int(input("Cekmek istediginiz miktari giriniz:"))
+              bakiye -= miktar2
+              if (miktar2 > bakiye):
+                 print("\nBakiye yetersiz..")
+                 continue
+
+              elif(miktar2<=bakiye):
+                print("\nYeni bakiyeniz: ", bakiye, "tl`dir..\n")
+              continue
+
+          elif (islem == 3):
+            print("Bakiyeniz :", bakiye, "tl`dir..\n")
+            islem2 = int(input("1.Ana menu\n2.Cikis\n"))
+            if (islem2 == 1):
+                print("Ana menuye gidiliyor..")
+                continue
+            else:
+                print("Cikis yapiliyor..")
+                break
+          elif (islem == 4):
+            print("Cikis yapiliyor..")
+            break
+
+  elif(sys_sifre!=sifre):
+    print("Hatali sifre girdiniz..")
+    hak-=1
+
+  if(hak==0):
+     print("""\nGiris hakkiniz bitti ve kartiniz bloke oldu..
+Lutfen bankanizla iletisime geciniz..""")
+     break
