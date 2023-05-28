@@ -1,0 +1,34 @@
+import random
+import time
+
+print("""  ******************
+SAYI TAHMIN ETME OYUNU
+  ******************
+1 ile 50 arasinda bir sayi tahmin ediniz..
+NOT: 5 Sayi tahmin hakkiniz bulunmaktadir..
+""")
+
+rastgele_sayi =random.randint(1,50)
+tahmin_hakki=5
+
+while True:
+    sayi=int(input("Sayi:"))
+    if(sayi<rastgele_sayi):
+        print("Bilgiler sorgulaniyor..")
+        time.sleep(0.5)
+        print("Daha buyuk bir sayi giriniz..")
+        tahmin_hakki-=1
+    elif(sayi>rastgele_sayi):
+        print("Bilgiler sorgulaniyor..")
+        time.sleep(0.5)
+        print("Daha kucuk bir sayi giriniz..")
+        tahmin_hakki -= 1
+    else:
+        print("Bilgiler sorgulaniyor..")
+        time.sleep(0.5)
+        print("\nTebrikler:) tahmin sayimiz:",rastgele_sayi)
+        break
+    if(tahmin_hakki==0):
+      print("\nTahmin hakkiniz bitti..:( ")
+      print("Dogru sayi:",rastgele_sayi)
+      break
