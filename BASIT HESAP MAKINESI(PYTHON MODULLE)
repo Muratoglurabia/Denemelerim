@@ -63,7 +63,7 @@ while True:
             else:
                 print("Hesaplama yapiliyor..")
                 time.sleep(0.5)
-            print("{}`in % {}`i = {}`dir".format(sayi1,sayi2,modulum.yuzde(sayi1,sayi2)))
+                print("{}`in % {}`i = {}`dir".format(sayi1,sayi2,modulum.yuzde(sayi1,sayi2)))
 
     continue
 
