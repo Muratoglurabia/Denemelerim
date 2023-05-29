@@ -1,27 +1,61 @@
-print("""
-           *************
-   Hesap makinesine hosgeldiniz..
-   
-    Toplama islemi icin 1`e basiniz..
-    Cikarma islemi icin 2`e basiniz..
-    Carpma  islemi icin 3`e basiniz..
-    Bolme   islemi icin 4`e basiniz..
-           *************
+import math
+import time
+
+print("""********************
+   HESAP MAKINESI
+********************
+1.Toplama 
+2.Cikartma
+3.Carpma
+4.Bolme
+5.Faktoriyel
+6.Karekok
+7.Cikis
+********************
 """)
+while True:
+    islem=int(input("Yapmak istediginiz islemin kodunu giriniz:"))
+    if(islem==5 or islem==6 or islem==7):
+        if (islem == 7):
+          print("Cikis yapiliyor..")
+          break
 
-a = int(input("Birinci sayiyi giriniz:"))
-b= int(input("Ikinci sayiyi giriniz: "))
-islem= int(input("islemi seciniz : "))
+        else:
+                sayi3 = int(input("Sayiyi giriniz:"))
+                if (islem == 5):
+                    print("Hesaplama yapiliyor..")
+                    time.sleep(0.5)
+                    math.factorial(sayi3)
+                    print("{}`nin Faktoriyeli = {}".format(sayi3, math.factorial(sayi3)))
 
-if islem==1:
-        print("{} + {} = {}".format(a,b,a+b))
+                elif (islem == 6):
+                    print("Hesaplama yapiliyor..")
+                    time.sleep(0.5)
+                    math.sqrt(sayi3)
+                    print("{}`in Karekoku = {}".format(sayi3, math.sqrt(sayi3)))
+        continue
 
-elif islem==2:
-        print("{} - {} = {}".format(a,b,a-b))
 
-elif islem == 3:
-        print("{} * {} = {}".format(a, b, a * b))
-elif islem==4:
-        print("{} / {} = {}".format(a,b,a/b))
-else:
-    print("Gecersiz islem..")
+    else:
+            sayi1 = int(input("1. Sayi:"))
+            sayi2 = int(input("2. Sayi:"))
+            if(islem==1):
+                print("Hesaplama yapiliyor..")
+                time.sleep(0.5)
+                print("{} + {} = {}".format(sayi1,sayi2,sayi1+sayi2))
+
+            elif (islem == 2):
+                print("Hesaplama yapiliyor..")
+                time.sleep(0.5)
+                print("{} - {} = {}".format(sayi1, sayi2, sayi1 - sayi2))
+
+            elif (islem == 3):
+                print("Hesaplama yapiliyor..")
+                time.sleep(0.5)
+                print("{} * {} = {}".format(sayi1, sayi2, sayi1 * sayi2))
+
+            elif (islem == 4):
+                print("Hesaplama yapiliyor..")
+                time.sleep(0.5)
+                print("{} / {} = {}".format(sayi1, sayi2, sayi1 / sayi2))
+    continue
