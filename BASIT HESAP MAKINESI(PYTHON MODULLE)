@@ -1,5 +1,6 @@
 import math
 import time
+import modulum
 
 print("""********************
    HESAP MAKINESI
@@ -10,13 +11,14 @@ print("""********************
 4.Bolme
 5.Faktoriyel
 6.Karekok
-7.Cikis
+7.Yuzde
+8.Cikis
 ********************
 """)
 while True:
     islem=int(input("Yapmak istediginiz islemin kodunu giriniz:"))
-    if(islem==5 or islem==6 or islem==7):
-        if (islem == 7):
+    if(islem==5 or islem==6 or islem==8):
+        if (islem == 8):
           print("Cikis yapiliyor..")
           break
 
@@ -26,13 +28,13 @@ while True:
                     print("Hesaplama yapiliyor..")
                     time.sleep(0.5)
                     math.factorial(sayi3)
-                    print("{}`nin Faktoriyeli = {}".format(sayi3, math.factorial(sayi3)))
+                    print("{}`nin Faktoriyeli = {}`dir".format(sayi3, math.factorial(sayi3)))
 
                 elif (islem == 6):
                     print("Hesaplama yapiliyor..")
                     time.sleep(0.5)
                     math.sqrt(sayi3)
-                    print("{}`in Karekoku = {}".format(sayi3, math.sqrt(sayi3)))
+                    print("{}`in Karekoku = {}`dir".format(sayi3, math.sqrt(sayi3)))
         continue
 
 
@@ -42,20 +44,26 @@ while True:
             if(islem==1):
                 print("Hesaplama yapiliyor..")
                 time.sleep(0.5)
-                print("{} + {} = {}".format(sayi1,sayi2,sayi1+sayi2))
+                print("{} + {} = {}`dir".format(sayi1,sayi2,modulum.toplama(sayi1,sayi2)))
 
             elif (islem == 2):
                 print("Hesaplama yapiliyor..")
                 time.sleep(0.5)
-                print("{} - {} = {}".format(sayi1, sayi2, sayi1 - sayi2))
+                print("{} - {} = {}`dir".format(sayi1, sayi2, modulum.cikartma(sayi1,sayi2)))
 
             elif (islem == 3):
                 print("Hesaplama yapiliyor..")
                 time.sleep(0.5)
-                print("{} * {} = {}".format(sayi1, sayi2, sayi1 * sayi2))
+                print("{} * {} = {}`dir".format(sayi1, sayi2, modulum.carpma(sayi1,sayi2)))
 
             elif (islem == 4):
                 print("Hesaplama yapiliyor..")
                 time.sleep(0.5)
-                print("{} / {} = {}".format(sayi1, sayi2, sayi1 / sayi2))
+                print("{} / {} = {}`dir".format(sayi1, sayi2, modulum.bolme(sayi1,sayi2)))
+            else:
+                print("Hesaplama yapiliyor..")
+                time.sleep(0.5)
+            print("{}`in % {}`i = {}`dir".format(sayi1,sayi2,modulum.yuzde(sayi1,sayi2)))
+
     continue
+
